@@ -55,6 +55,19 @@ public class HospitalMain1
       
         
             case 4:    
+                       itr1=h2.iterator();
+                                while(itr1.hasNext())
+                                { 
+                                  System.out.println(((Hospital)itr1.next()).doctorName + " ->  ");
+                                  itr=h1.iterator();
+                                  while(itr.hasNext())
+                                  {
+                                  if((((Hospital)itr1.next()).doctorSpeciality).equals(((Hospital)itr.next()).disease));
+                                  {
+                                    System.out.println(((Hospital)itr.next()).patientName + " " );
+                                  }
+                                  }
+                                }
                       /*for(int i=0;i<count2;i++)
                        {
                         String name1=h1[i].designation_d;
