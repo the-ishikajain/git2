@@ -1,4 +1,7 @@
 import java.util.*;
+import emp.Doctor;
+import emp.Patient;
+import emp.Hospital;
 public class HospitalMain1
 {
   public static void main (String args[])
@@ -6,7 +9,11 @@ public class HospitalMain1
     int cur=0;
     int count1=0,count2=0;
      Scanner cin = new Scanner (System.in);
-      Hospital h1[]= new Hospital[50];
+      //Hospital h1[]= new Hospital[50];
+      ArrayList<Hospital> h1=new ArrayList<Hospital>();
+      ArrayList<Hospital> h2=new ArrayList<Hospital>();
+      Iterator itr=h1.iterator();
+      Iterator itr1=h2.iterator();
       int choice=0;
        do
        {
@@ -19,23 +26,36 @@ public class HospitalMain1
         switch (choice)
         {
             case 1:        Patient p1=new Patient();
-                            h1[cur++]=p1;
+                            h1.add(p1);
                             count1++;
                             break;               
             case 2:      
                           Doctor d1=new Doctor();
-                          h1[cur++]=d1;
+                          h2.add(d1);
                           count2++;
                           
-                          break;
-            case 3:        for(int i=0;i<cur;i++)
+                          break; 
+                         
+            case 3:        
+                            System.out.println("All Patients List : ");
+                              itr=h1.iterator();
+                              while(itr.hasNext())
                               { 
-                                  System.out.println(h1[i]);
+                                Hospital ho=(Hospital)itr.next();
+                                  System.out.println(ho);
+                              }
+                              System.out.println("All Doctors List : ");
+                              itr1=h2.iterator();
+                              while(itr1.hasNext())
+                              { 
+                                Hospital ho=(Hospital)itr1.next();
+                                  System.out.println(ho);
                               }
                           break;
       
         
-            case 4:    for(int i=0;i<count2;i++)
+            case 4:    
+                      /*for(int i=0;i<count2;i++)
                        {
                         String name1=h1[i].designation_d;
                        
@@ -52,6 +72,7 @@ public class HospitalMain1
                          System.out.println();
                         }
                        }
+                       */
                        break;
             case 5:    System.out.println("You are Exiting");
                         break;
