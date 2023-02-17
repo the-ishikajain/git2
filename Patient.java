@@ -1,3 +1,4 @@
+package emp;
 import java.util.*;
 class Patient extends Hospital
 {
