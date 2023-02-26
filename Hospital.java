@@ -11,6 +11,15 @@ class Hospital
     static String doctorSpeciality;
     int doctorPayment;
     int doctorAge;
+   int amount;
+int id;
+int patient_id
+public void invoice(int patientPayment)
+{
+amount=patientPayement;
+this.id=new Scanner(System.in).nextInt();
+this.patient_id=new Scanner(System.in).nextInt();
+}
    Hospital()
     {
       try
@@ -24,6 +33,7 @@ class Hospital
         System.out.println("Enter disease of a patient : ");
         this.disease = new Scanner(System.in).next();
         this.designation_p="Patient";
+         invoice(patientPayment);
       }
       catch(Exception e)
       {
