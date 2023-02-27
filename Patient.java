@@ -14,6 +14,6 @@ class Patient extends Hospital
     System.out.println("Patient Disease : " + super.disease);
     return "\n";
     }
-    Invoice(patientPayment);
+  
 }
 
