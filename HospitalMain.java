@@ -1,11 +1,19 @@
 import java.util.*;
 import emp.Doctor;
 import emp.Patient;
+import emp.Invoice;
 import emp.Hospital;
 public class HospitalMain1
 {
   public static void main (String args[])
   {
+     String Hospital1="Raymond Hospital";
+     String Hospital2="Diamond Hospital";
+    int c;
+     System.out.println("Enter Hospital Name : 1 : Raymond Hospital or 2 : Diamond Hospital ");
+                              s=cin.nextInt();
+                              if(c==1 || c==2)
+                              {
     int cur=0;
     int count1=0,count2=0;
      Scanner cin = new Scanner (System.in);
@@ -14,9 +22,8 @@ public class HospitalMain1
       ArrayList<Hospital> h2=new ArrayList<Hospital>();
       Iterator itr=h1.iterator();
       Iterator itr1=h2.iterator();
-      String Hospital1="Raymond Hospital";
-     String Hospital2="Diamond Hospital";
-    int c;
+     
+    
       int choice=0;
        do
        {
@@ -29,17 +36,10 @@ public class HospitalMain1
         switch (choice)
         {
             case 1:        Patient p1=new Patient();
-                              System.out.println("Enter Hospital Name : 1 : Raymond Hospital or 2 : Diamond Hospital ");
-                              s=cin.nextInt();
-                              if(c==1 || c==2)
-                              {
+                             
                             h1.add(p1);
+                           new Invoice();
                             count1++;
-                              }
-                                 else
-                                 {
-                                    System.out.println("Hospital doesnt exist");
-                                 }
               
                             break;               
             case 2:      
@@ -104,5 +104,10 @@ public class HospitalMain1
                         break;
         }
     }while(choice!=5);
+                                 }
+                                 else
+                                 {
+                                    System.out.println("Hospital doesnt exist");
+                                 }
       }
 }
